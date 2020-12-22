@@ -12,7 +12,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i(mri mingw x64_mingw)
+  gem 'rubocop', '0.76', require: false
+  gem 'rubocop-airbnb'
 end
 
 group :development do
@@ -26,7 +28,8 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec-rails', '~>3.8'
 end
 
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 gem 'nokogiri'
